@@ -1,0 +1,102 @@
+@mixin shadow($count, $shadow_1, $shadow_2) {
+    @if $count==1 {
+        box-shadow: $shadow_1;
+    } @else {
+        box-shadow: $shadow_1, $shadow_2;
+    }
+}
+
+//neu
+@mixin neu_box_sank($r, $cl_bg, $cl-d, $cl-l, $xy, $blur) {
+    border-radius: $r;
+    background: $cl_bg;
+    box-shadow: inset $xy #{$xy} $blur $cl-d, inset -#{$xy} -#{$xy} $blur $cl-l;
+}
+@mixin neu_box_float($r, $cl_bg, $cl-d, $cl-l, $xy, $blur) {
+    border-radius: $r;
+    background: $cl_bg;
+    box-shadow: $xy #{$xy} $blur $cl-d, -$xy -#{$xy} $blur $cl_l;
+}
+
+//input
+@mixin input($w, $pd, $bg_color) {
+    width: $w;
+    pd: pd;
+    background-color: $bg_color;
+}
+
+//border
+@mixin border($line, $style, $cl) {
+    border: $line $style $cl;
+}
+
+//imgBx
+@mixin imgBx($width, $height) {
+        width: $width;
+        height: $height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        img {
+            max-height: 100%;
+            height: auto;
+            width: auto;
+        }
+}
+
+//list
+
+
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleButton($bg-color, $border, $pd-y, $pd-x, $bd-radius) {
+    background-color: $bg-color;
+    border: 1px solid $border;
+    padding: $pd-y $pd-x;
+    border-radius: $bd-radius;
+}
+@mixin hoverButton($bg-color, $bd-hover, $color-hover) {
+    background-color: $bg-hover;
+    border-color: $bd-hover;
+    color: $color-hover;
+}
+// @mixin styleForm($bg-color, $bd-color-focus){
+//     .input-group{
+//         input{
+//             background-color: transparent;
+//             border: 1px solid transparent;
+//             box-shadow: none;
+//             &:focus{
+//                 background-color: $color-white-0;
+//                 border-color: $bd-color-focus;
+//                 border-right-color: transparent;
+//                 box-shadow: none;
+//                 & + .input-group-append{
+//                     .input-group-text{
+//                         border-left-color: transparent;
+//                         background-color: #fff;
+//                     }
+
+//                 }
+//             }
+//         }
+//     }
+// }
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+        //Kiểm tra xem $screen có tồn tại trong $breakpoints không
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Nhập lại";
+    }
+}

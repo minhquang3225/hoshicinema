@@ -1,0 +1,11 @@
+.tooltip{
+    visibility: hidden;
+    position: absolute;
+    right: -$mg-6;
+    padding: $pd-0 $pd-2;
+    background-color: $cl_txt_02-d;
+    
+    font-size: .7rem;
+    color: $cl_black_01;
+    border-radius: $r_thin;
+}

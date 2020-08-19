@@ -1,0 +1,296 @@
+.funcBar__zone {
+    position: relative;
+    align-items: center;
+    grid-column: span 18;
+    height: calc(#{$h_funcbar}* 2);
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $mg-5;
+    z-index: 100;
+
+    .funcBar {
+        height: $h_funcbar;
+        left: 0;
+        top: $pd-1;
+        transition: width 0.2s ease-in, padding 0s ease-in;
+        padding: 30px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: var(--cl_bg_02);
+        color: var(--cl_txt_01);
+        border-radius: $r_medium;
+        font-size: 1.8rem;
+    }
+    .funcBar__search {
+        width: 65%;
+        transition: width 0.2s ease-in 0s;
+
+        .search__bar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .search__result {
+            width: 100%;
+            display: none;
+        }
+        .search__icon {
+            display: flex;
+            align-items: center;
+            font-size: 2.4rem;
+            color: var(--cl_txt_02);
+            margin-right: $mg-4;
+        }
+        .search__input {
+            border: none;
+            border-bottom: 2px solid $cl_txt_02-d;
+            padding-left: 0;
+            color: var(--cl_txt_01);
+            display: block;
+            width: 90%;
+            transition: width 0s ease-in 0s, opacity 0.3s ease-in 0.2s;
+            opacity: 1;
+            &::placeholder {
+                color: var(--cl_txt_02);
+                opacity: 0.7;
+                padding: $pd-0 0;
+                font-weight: 700;
+                text-decoration: solid;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+    .funcBar__gargets {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+    }
+    .funcBar__write {
+        @include neu_box_float($r_medium, var(--cl_bg_02), var(--cl_shadow_01), var(--cl_shadow_02), 3px, 6px);
+        border: none;
+        width: 130px;
+        height: 40px;
+        position: relative;
+        a {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .funcBar__write-content {
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-style: normal;
+            width: fit-content;
+            margin: 0 auto;
+            display: flex;
+            color: var(--cl_txt_01);
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                bottom: -$mg-1;
+                background-color: $cl_theme_01-d;
+            }
+        }
+    }
+    .funcBar__light {
+        @include neu_box_float($r_medium, var(--cl_bg_02), var(--cl_shadow_01), var(--cl_shadow_02), 3px, 6px);
+        height: 40px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            color: $cl_theme_01-d;
+        }
+        &.light {
+            .fa-clouds-moon {
+                display: block;
+            }
+            .fa-sun {
+                display: none;
+            }
+        }
+        .fa-clouds-moon {
+            display: none;
+        }
+        .fa-sun {
+            display: block;
+        }
+    }
+    .funcBar__more {
+        &:hover {
+            color: $cl_theme_01-d;
+        }
+    }
+    &.sticky {
+        position: sticky;
+        top: 0;
+    }
+    &.unactive {
+        animation: fadeIn 0.5s ease-in;
+        .funcBar {
+            padding: 30px 20px;
+            width: 370px;
+            transition: width 0s ease-in, padding 0s ease-in;
+        }
+        .funcBar__search {
+            width: 20%;
+            transition: width 0s ease-in;
+            .search__input {
+                opacity: 0;
+                transition: none;
+                width: 0;
+            }
+        }
+        .funcBar__gargets {
+            width: 250px;
+        }
+    }
+    &.search-active {
+        animation: none;
+        .funcBar {
+            justify-content: flex-end;
+            .search__bar {
+                position: absolute;
+                flex-wrap: wrap;
+                width: 90%;
+                height: 100vh;
+                transform: translateX(-50%);
+                left: 46%;
+                top: 0;
+                padding: $pd-7;
+                z-index: 1100;
+                overflow-y: scroll;
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .search__icon {
+                    margin-right: $mg-6;
+                    font-size: 40px;
+                    width: 10%;
+                }
+                label {
+                    display: block;
+                    width: $pd-a;
+                }
+                .search__input {
+                    padding: $pd-5 0;
+                    font-size: 30px;
+                    border-bottom-color: var(--cl_theme_01);
+                    width: 92%;
+                    opacity: 1;
+                    transition: none;
+                    transition: width 0s ease-in, opacity 0s ease-in 0s;
+                }
+                .search__result {
+                    background-color: transparent;
+                    display: block;
+                    margin-top: $mg-3;
+                    padding: $pd-6 $pd-0 $pd-6 $pd-a;
+                    font-size: 1.5rem;
+                    .list-item {
+                        position: relative;
+                        width: 100%;
+                        height: 80px;
+                        background-color: $cl_bg_02-d;
+                        transition: background-color 0.3s ease-in;
+                        padding: 0 $pd-4 0 0;
+                        border-radius: $r_soft;
+                        margin-bottom: $mg-5;
+                        & > a {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        &:hover {
+                            background-color: rgba($color: $cl_bg_02-d, $alpha: 0.6);
+                            transition: background-color 0.1s ease-in;
+                        }
+                    }
+                    .list-item__thumbnail {
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        .imgBx {
+                            @include imgBx(100%, 100%);
+                        }
+                    }
+                    .list-item__title {
+                        padding-left: $pd-6;
+                        display: flex;
+                        flex-direction: column;
+                        .m-title {
+                        }
+                        .sub-title {
+                            font-size: 0.7em;
+                            font-style: italic;
+                            color: var(--cl_txt_02);
+                        }
+                    }
+                    .list-item__category {
+                        min-width: 100px;
+                        max-width: 500px;
+                        position: absolute;
+                        right: $pd-3;
+                        transform: translateY(-50%);
+                        top: 0;
+                        font-size: 0.8em;
+                        li {
+                            display: inline;
+                            color: var(--cl_txt_01);
+                            margin-right: $mg-1;
+                            padding: $pd-0 $pd-3;
+                        }
+                        [data-type="manga"] {
+                            background-color: var(--cl_theme_01);
+                        }
+                        [data-type="anime"] {
+                            background-color: green;
+                        }
+                        [data-type="cinema"] {
+                            background-color: blue;
+                        }
+                        [data-type="literature"] {
+                            background-color: orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

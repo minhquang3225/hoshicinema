@@ -1,0 +1,19 @@
+.link{
+    position: relative;
+    text-decoration: none;
+    color: $cl_txt_02-d;
+    font-style: italic;
+    &.active{
+        &::after{
+            content: '';
+            position: absolute;
+            width: 105%;
+            height: 2px;
+            bottom: -0.3rem;;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            background-color: $cl_theme_01-d;
+        }
+    }
+}

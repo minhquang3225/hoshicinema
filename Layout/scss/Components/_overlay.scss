@@ -1,0 +1,69 @@
+.overlay__bg {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    transition: all 0s ease-in;
+    z-index: 1000;
+    visibility: hidden;
+    &.overlay-active {
+        display: block;
+        visibility: visible;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--cl_bg_01);
+        transition: all 0.3s ease-in;
+        opacity: 0.99;
+        & ~ .overlay__content {
+            display: block;
+            opacity: 1;
+        }
+        & ~ .overlay__close{
+            display: block;
+            opacity: .8;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.overlay__content {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 100vh;
+    z-index: 1001;
+    display: none;
+    opacity: 0;
+}
+.overlay__close {
+    position: fixed;
+    top: 30px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    display: none;
+    opacity: 0;
+    z-index: 1002;
+    &::before,
+    &::after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 35px;
+        width: 4px;
+        background-color: #fff;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

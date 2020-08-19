@@ -1,0 +1,7 @@
+.page-wrapper {
+    grid-column: span 12;
+    padding: $pd-1 0 $pd-1 $pd-4;
+    .section__list {
+        list-style: none;
+    }
+}

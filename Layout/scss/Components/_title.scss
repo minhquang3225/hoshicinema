@@ -1,0 +1,16 @@
+.section-title{
+    position: relative;
+    color: var(--cl_txt_01);
+    margin-bottom: $mg-5;
+    &::before{
+        content: '';
+        position: absolute;
+        transform: translate(0, -50%);
+        top: 50%;
+        left: -$pd-4;
+        display: inline-block;
+        width: 5px;
+        height: 24px;
+        background-color: $cl_theme_01-d;
+    }
+}

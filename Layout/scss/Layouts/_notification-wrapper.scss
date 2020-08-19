@@ -1,0 +1,41 @@
+// .notification__zone{
+
+// }
+.notification-wrapper {
+    position: sticky;
+    top: calc(#{$h_funcbar}* 2 + #{$mg-5});
+    height: min-content;
+    padding: $pd-1 0 $pd-1 $pd-4;
+}
+.notification-main {
+    height: 70vh;
+    position: relative;
+
+    padding: 40px;
+    border-radius: 20px;
+    background: var(--cl_bg_01);
+    @include neu_box_sank($r_hard, var(--cl_bg_01), var(--cl_shadow_03), var(--cl_shadow_04), 12px, 10px);
+    .tab__indicators {
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        border-bottom: 1px solid #ccc;
+        font-size: 20px;
+        .tab {
+            flex-grow: 1;
+            text-align: center;
+            &:hover,
+            &.tab-active {
+                color: var(--cl_theme_01);
+            }
+        }
+    }
+    [data-tab-content] {
+        display: none;
+        &.tab-active {
+            display: block;
+        }
+    }
+}

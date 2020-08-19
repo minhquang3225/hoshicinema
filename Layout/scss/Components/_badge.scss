@@ -1,0 +1,12 @@
+.badge{
+    cursor: pointer;
+    padding: $pd-0 $pd-4;
+    background-color: var(--cl_bg_01);
+    text-align: center;
+    font-size: .7rem;
+    color: $cl_black_01;
+    border-radius: $r_thin;
+}
+.badge.vip{
+    background-color: var(--cl_theme_02);
+}
