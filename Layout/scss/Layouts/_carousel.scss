@@ -1,0 +1,171 @@
+.carousel {
+    width: 100%;
+    height: 500px;
+    background: url("../../image/carousel_bg.jpg") top / cover;
+}
+.carousel__banner {
+    color: $cl_white_01;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    p {
+        &:nth-of-type(1) {
+            font-size: 2.6rem;
+            font-weight: 700;
+            span {
+                color: #bb511e;
+            }
+        }
+        &:nth-of-type(2) {
+            font-size: 1.6rem;
+            text-align: right;
+            font-style: italic;
+        }
+        &:last-of-type {
+            text-transform: none;
+            align-self: left;
+        }
+    }
+    button {
+        background: linear-gradient(to right, #bb511e, #f1bc00);
+        padding: $pd-2 $pd-7;
+        color: inherit;
+        border-radius: $r_hard;
+        margin-top: $mg-4;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}
+.carousel__slide {
+    .carousel-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 50%;
+        box-sizing: content-box;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .carousel-slide {
+        display: flex;
+        width: fit-content;
+    }
+
+    .carousel-image {
+        position: relative;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        &.active:hover{
+            .overlay{
+                opacity: 1;
+                transition: opacity .5 ease-in;
+            }
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.258);
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+            transition: opacity .5 ease-in;
+            opacity: 0;
+            i{
+                margin: $mg-2;
+                color: #fff;
+                font-size: 1.5rem;
+            }
+            .overlay__bg{
+                height: 100%;
+            }
+        }
+    }
+
+    /* .carousel-image:hover, */
+    .carousel-image.active {
+        position: relative;
+        transform: scale(1.6);
+        z-index: 10;
+    }
+
+    .carousel-image.sub {
+        position: relative;
+        transform: scale(1.2);
+        z-index: 5;
+    }
+
+    img {
+        /* width: 300px; */
+        min-height: 100%;
+        max-height: 100%;
+        /* Dùng cho object fit cho những ảnh có chiều rộng lớn hơn chiều dài */
+        object-fit: cover;
+    }
+
+    .carousel-dots {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dot {
+        border: 1px solid rgb(169, 169, 169);
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: rgb(208, 208, 208);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.1s;
+    }
+
+    .dot.active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    button {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        color: white;
+        display: none;
+    }
+
+    #prevBtn {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        font-size: 30px !important;
+        z-index: 10;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    #nextBtn {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+        font-size: 30px !important;
+        z-index: 10;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}

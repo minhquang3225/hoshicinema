@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/homepage.css">
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sortland_bridge.jpg/1200px-Sortland_bridge.jpg" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sortland_bridge.jpg/1200px-Sortland_bridge.jpg"
+        type="image/x-icon">
     <title>Hoshi Cinema</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/homepage.css">
 </head>
+
 <body>
     <div class="container main-container">
         <header insert="./html_e/nav.html"></header>
-        <div class="carousel" insert="./html_e/carousel.html"></div>
+        <div class="carousel row" insert="./html_e/carousel.html"></div>
         <div class="feature" insert="./html_e/feature.html"></div>
         <div class="showtime" insert="./html_e/showtime.html"></div>
     </div>
@@ -19,5 +24,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script>
+        setTimeout(() => {
+            QuangCarousel(false, 5, '.5s', 1500, .4, 5);
+        }, 500)
+    </script>
 </body>
+
 </html>
