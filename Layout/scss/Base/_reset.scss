@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
 
 * {
     margin: 0;
@@ -28,15 +27,8 @@ body {
 
 
 }
-.container {
-    width: 100%;
-    max-width: 1500px;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-}
-main {
-    position: relative;
-    grid-column: span 11;
+.main-container{
+    max-width: 1700px;
 }
 header {
     position: absolute;
