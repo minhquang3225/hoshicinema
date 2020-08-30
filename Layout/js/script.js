@@ -66,3 +66,20 @@ overlayActive = (parentClassName) =>{
         })
         
 }
+
+function showPassword(classParent){
+    let x = document.querySelector(`.${classParent} .password`);
+    let y = document.querySelector(`.${classParent} .hide1`);
+    let z = document.querySelector(`.${classParent} .hide2`);
+    
+    if (x.type === 'password') {
+        x.type = "text";
+        y.style.display = "block";
+        z.style.display = "none";
+    }
+    else{
+        x.type = "password";
+        y.style.display = "none";
+        z.style.display = "block";
+    }
+}

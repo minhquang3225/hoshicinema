@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./css/homepage.css">
+
 </head>
 
 <body>
     <div class="container main-container">
-        <header insert="./html_e/nav.html"></header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light" insert="./html_e/nav.html"></nav>
         <div class="carousel row" insert="./html_e/carousel.html"></div>
         <div class="feature" insert="./html_e/feature.html"></div>
         <div class="showtime" insert="./html_e/showtime.html"></div>
@@ -25,9 +26,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         setTimeout(() => {
             QuangCarousel(false, 5, '.5s', 1500, .4, 5);
+            $(document).ready(function () {
+                $('.tab-carousel').slick({
+                    // setting- name: setting - value
+                });
+            });
         }, 500)
     </script>
 </body>
