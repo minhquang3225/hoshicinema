@@ -17,6 +17,16 @@ nav {
     }
     .nav-item {
         margin-right: 30px;
+        button{
+            background-color: inherit !important;
+            font-size: inherit;
+            color: inherit;
+            outline: none;
+            font-weight: inherit;
+        }
+        &:hover{
+            color: $cl_theme_01-l;
+        }
     }
     .modal-overlay {
         position: absolute;
@@ -26,11 +36,13 @@ nav {
     }
     .modal-dialog {
         max-width: 60%;
+        color: $cl_txt_01-l
     }
     .modal-body {
         display: flex;
         justify-content: space-between;
         padding: 0;
+
         .login-top.left {
             float: left;
             width: 56%;
@@ -46,6 +58,7 @@ nav {
             input {
                 padding: 10px 0;
                 padding-right: 30px;
+                margin-bottom: 10px;
             }
             textarea {
                 height: 80px;
@@ -66,7 +79,7 @@ nav {
             input[type="submit"] {
                 border-bottom: none;
                 cursor: pointer;
-                background: #cb1217;
+                background: $cl_theme_01-d;
                 color: #fff;
                 margin-bottom: 0em;
                 text-transform: uppercase;
@@ -74,13 +87,17 @@ nav {
             form div {
                 position: relative;
                 margin-bottom: 30px;
-            }
-            form div label {
-                position: absolute;
-                top: 10px;
-                left: 0;
-                transition: 0.5s;
-                pointer-events: none;
+                label {
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    transition: 0.5s;
+                    pointer-events: none;
+                }
+                small{
+                    display: block;
+                    color: red;
+                }
             }
             input:focus ~ label,
             textarea:focus ~ label,
@@ -88,7 +105,7 @@ nav {
             textarea:valid ~ label {
                 top: -12px;
                 left: 0;
-                color: #cb1217;
+                color: $cl_theme_01-d;
                 font-size: 12px;
                 font-weight: bold;
             }
@@ -96,13 +113,13 @@ nav {
             textarea:focus,
             input:valid,
             textarea:valid {
-                border-bottom: 2px solid #cb1217;
+                border-bottom: 2px solid $cl_theme_01-d;
             }
         }
         .login-top.right {
             width: 40%;
             float: left;
-            padding: 4.8em 2em;
+            padding: 4.8em 1.5em;
             background: url(../image/login_bg.jpg);
             color: #fff;
             input[type="text"],
@@ -152,7 +169,7 @@ nav {
         .login-bottom input[type="submit"] {
             font-size: 0.9em;
             color: #fff;
-            background: #cb1217;
+            background: $cl_theme_01-d;
             outline: none;
             border: none;
             cursor: pointer;
@@ -173,10 +190,7 @@ nav {
             background: #227279;
         }
 
-        .login-top input[type="text"]:hover,
-        .login-top input[type="password"]:hover {
-            border-bottom-color: rgba(132, 141, 215, 0.52);
-        }
+        
 
         .login-top.right h3 {
             text-align: center;

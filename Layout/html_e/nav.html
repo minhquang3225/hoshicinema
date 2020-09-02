@@ -27,12 +27,11 @@
         </li>
         <li class="nav-item">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+            <button type="button" data-toggle="modal"class=" nav-link" data-target="#modelId">
                 Đăng nhập và đăng kí
             </button>
             <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
                 aria-hidden="true">
-                <!-- <div class="modal-overlay"></div> -->
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
@@ -45,7 +44,8 @@
                                     <div>
                                         <input type="text" name="" required>
                                         <label for="">Username</label>
-                                        <!-- <small class="err">* Bạn chưa nhập username</small> -->
+                                        <!-- <small class="err">* Bạn chưa nhập username</small>
+                                        <small class="err">* Username phải có tối đa 6-18 kí tự</small> -->
                                     </div>
                                     <div>
                                         <input type="text" name="" required=''>
@@ -70,7 +70,6 @@
                                     <input type="submit" value="ĐĂNG KÍ">
                                 </form>
                             </div>
-
                             <div class="login-top right">
                                 <h3>Đăng nhập</h3>
                                 <form action="#" method="post">

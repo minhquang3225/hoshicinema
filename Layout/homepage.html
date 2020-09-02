@@ -10,32 +10,48 @@
     <title>Hoshi Cinema</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./library/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/homepage.css">
 
 </head>
 
 <body>
     <div class="container main-container">
-        <nav class="navbar navbar-expand-sm navbar-light bg-light" insert="./html_e/nav.html"></nav>
+        <nav class="navbar navbar-expand-sm" insert="./html_e/nav.html"></nav>
         <div class="carousel row" insert="./html_e/carousel.html"></div>
         <div class="feature" insert="./html_e/feature.html"></div>
         <div class="showtime" insert="./html_e/showtime.html"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./library/bootstrap/jquery.min.js"></script>
+    <script src="./library/bootstrap/popper.min.js"></script>
+    <script src="./library/bootstrap/bootstrap.min.js"></script>
+    <script src="./library/owl-carousel/owl.carousel.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         setTimeout(() => {
-            QuangCarousel(false, 5, '.5s', 1500, .4, 5);
             $(document).ready(function () {
-                $('.tab-carousel').slick({
-                    // setting- name: setting - value
+                $(".owl-carousel").owlCarousel({
+                    loop: true,
+                    margin: 20,
+                    nav: true,
+                    dots: false,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 6
+                        }
+                    }
                 });
             });
-        }, 500)
+            QuangCarousel(false, 5, '.5s', 1500, .4, 5);
+
+        }, 1000)
     </script>
 </body>
 

@@ -20,7 +20,7 @@ body {
     --cl_bg_03: #2e3234;
     --cl_txt_01: #f8f8f8;
     --cl_txt_02: #b2becd;
-    --cl_theme_01: #ff7575;
+    --cl_theme_01: #FE810F;
     --cl_theme_02: #ffa2a2;
     --cl_shadow_01: #1d2025;
     --cl_shadow_02: #373c45;
@@ -33,7 +33,7 @@ body {
     --cl_bg_03: #f1f1f1;
     --cl_txt_01: #000000;
     --cl_txt_02: #323232;
-    --cl_theme_01: #ff7575;
+    --cl_theme_01: #FE810F;
     --cl_theme_02: #ffa2a2;
     --cl_shadow_01: #F1F1F1;
     --cl_shadow_02: #EFEFEF;
@@ -45,16 +45,20 @@ body {
   max-width: 1700px; }
 
 .feature {
-  visibility: hidden; }
+  opacity: 1;
+  display: auto; }
 
-header {
-  visibility: visible; }
+nav {
+  opacity: 1;
+  display: auto !important; }
 
 .showtime {
-  visibility: hidden; }
+  opacity: 1;
+  display: auto; }
 
 .carousel {
-  visibility: hidden; }
+  opacity: 1;
+  display: auto !important; }
 
 ul {
   list-style: none; }
@@ -81,6 +85,9 @@ button {
   outline: none;
   border: none; }
 
+a:hover {
+  color: inherit; }
+
 nav {
   justify-content: space-between; }
   nav .navbar-brand {
@@ -97,13 +104,22 @@ nav {
     width: 100%; }
   nav .nav-item {
     margin-right: 30px; }
+    nav .nav-item button {
+      background-color: inherit !important;
+      font-size: inherit;
+      color: inherit;
+      outline: none;
+      font-weight: inherit; }
+    nav .nav-item:hover {
+      color: #FE810F; }
   nav .modal-overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.496);
     width: 100%;
     height: 100%; }
   nav .modal-dialog {
-    max-width: 60%; }
+    max-width: 60%;
+    color: #000000; }
   nav .modal-body {
     display: flex;
     justify-content: space-between;
@@ -120,7 +136,8 @@ nav {
         margin-bottom: 40px; }
       nav .modal-body .login-top.left input {
         padding: 10px 0;
-        padding-right: 30px; }
+        padding-right: 30px;
+        margin-bottom: 10px; }
       nav .modal-body .login-top.left textarea {
         height: 80px;
         padding: 10px 0;
@@ -137,37 +154,40 @@ nav {
       nav .modal-body .login-top.left input[type="submit"] {
         border-bottom: none;
         cursor: pointer;
-        background: #cb1217;
+        background: #FE810F;
         color: #fff;
         margin-bottom: 0em;
         text-transform: uppercase; }
       nav .modal-body .login-top.left form div {
         position: relative;
         margin-bottom: 30px; }
-      nav .modal-body .login-top.left form div label {
-        position: absolute;
-        top: 10px;
-        left: 0;
-        transition: 0.5s;
-        pointer-events: none; }
+        nav .modal-body .login-top.left form div label {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          transition: 0.5s;
+          pointer-events: none; }
+        nav .modal-body .login-top.left form div small {
+          display: block;
+          color: red; }
       nav .modal-body .login-top.left input:focus ~ label,
       nav .modal-body .login-top.left textarea:focus ~ label,
       nav .modal-body .login-top.left input:valid ~ label,
       nav .modal-body .login-top.left textarea:valid ~ label {
         top: -12px;
         left: 0;
-        color: #cb1217;
+        color: #FE810F;
         font-size: 12px;
         font-weight: bold; }
       nav .modal-body .login-top.left input:focus,
       nav .modal-body .login-top.left textarea:focus,
       nav .modal-body .login-top.left input:valid,
       nav .modal-body .login-top.left textarea:valid {
-        border-bottom: 2px solid #cb1217; }
+        border-bottom: 2px solid #FE810F; }
     nav .modal-body .login-top.right {
       width: 40%;
       float: left;
-      padding: 4.8em 2em;
+      padding: 4.8em 1.5em;
       background: url(../image/login_bg.jpg);
       color: #fff; }
       nav .modal-body .login-top.right input[type="text"],
@@ -207,7 +227,7 @@ nav {
     nav .modal-body .login-bottom input[type="submit"] {
       font-size: 0.9em;
       color: #fff;
-      background: #cb1217;
+      background: #FE810F;
       outline: none;
       border: none;
       cursor: pointer;
@@ -225,9 +245,6 @@ nav {
       border-radius: 5px; }
     nav .modal-body .login-bottom input[type="submit"]:hover {
       background: #227279; }
-    nav .modal-body .login-top input[type="text"]:hover,
-    nav .modal-body .login-top input[type="password"]:hover {
-      border-bottom-color: rgba(132, 141, 215, 0.52); }
     nav .modal-body .login-top.right h3 {
       text-align: center;
       margin: 0em 0 1em 0;
@@ -245,7 +262,8 @@ nav {
 .carousel {
   width: 100%;
   height: 500px;
-  background: url("../image/carousel_bg.jpg") top/cover; }
+  background: url("../image/carousel_bg.jpg") top/cover;
+  margin: 0; }
 
 .carousel__banner {
   color: #fff;
@@ -380,14 +398,57 @@ nav {
 .feature {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  height: 500px;
+  background-color: #12181B; }
   .feature .title {
     font-size: 2.8rem; }
   .feature .nav-pills {
     justify-self: center; }
-  .feature .slide_content {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #12181B; }
+    .feature .nav-pills .nav-item {
+      color: #fff;
+      position: relative;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-right: 20px;
+      display: flex;
+      align-items: center; }
+      .feature .nav-pills .nav-item::after {
+        content: '/'; }
+    .feature .nav-pills .nav-link {
+      background: none;
+      display: inline-block; }
+      .feature .nav-pills .nav-link.active {
+        color: #FE810F; }
+  .feature .owl-stage-outer {
+    width: 80vw; }
+  .feature .owl-item {
+    height: 350px;
+    color: #fff;
+    padding-bottom: 10px; }
+    .feature .owl-item .slide-content {
+      text-align: center; }
+    .feature .owl-item .imgBx {
+      height: 250px;
+      width: 100%;
+      margin-bottom: 15px; }
+  .feature .owl-nav .owl-next, .feature .owl-nav .owl-prev {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    top: 50%;
+    background: white !important;
+    border-radius: 50%;
+    border: 2px solid #FE810F;
+    outline: none; }
+    .feature .owl-nav .owl-next span, .feature .owl-nav .owl-prev span {
+      font-size: 30px;
+      line-height: 50px; }
+  .feature .owl-nav .owl-next {
+    left: 100%; }
+  .feature .owl-nav .owl-prev {
+    left: 0; }
 
 /*# sourceMappingURL=homepage.css.map */

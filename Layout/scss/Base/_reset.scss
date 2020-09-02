@@ -30,7 +30,7 @@ body {
     max-width: 1700px;
 }
 
-.feature{visibility: hidden;} header{visibility: visible;} .showtime{visibility: hidden;} .carousel{visibility: hidden;}
+.feature{opacity: 1; display: auto;} nav{opacity: 1; display: auto !important} .showtime{opacity: 1; display: auto} .carousel{opacity: 1; display: auto !important}
 ul{
     list-style: none;
 }
@@ -56,4 +56,7 @@ hr{
 button{
     outline: none;
     border: none;
+}
+a:hover{
+    color: inherit;
 }
