@@ -17,14 +17,14 @@ nav {
     }
     .nav-item {
         margin-right: 30px;
-        button{
+        button {
             background-color: inherit !important;
             font-size: inherit;
             color: inherit;
             outline: none;
             font-weight: inherit;
         }
-        &:hover{
+        &:hover {
             color: $cl_theme_01-l;
         }
     }
@@ -35,8 +35,8 @@ nav {
         height: 100%;
     }
     .modal-dialog {
-        max-width: 60%;
-        color: $cl_txt_01-l
+        max-width: 65%;
+        color: $cl_txt_01-l;
     }
     .modal-body {
         display: flex;
@@ -48,6 +48,9 @@ nav {
             width: 56%;
             padding: 50px;
             background: #fff;
+            input[type="submit"]:hover {
+                background: #227279;
+            }
             .imgBx {
                 margin: 0 auto;
             }
@@ -94,7 +97,7 @@ nav {
                     transition: 0.5s;
                     pointer-events: none;
                 }
-                small{
+                small {
                     display: block;
                     color: red;
                 }
@@ -122,19 +125,6 @@ nav {
             padding: 4.8em 1.5em;
             background: url(../image/login_bg.jpg);
             color: #fff;
-            input[type="text"],
-            input[type="password"] {
-                outline: none;
-                font-size: 0.9em;
-                color: #999;
-                padding: 12px;
-                margin: 0;
-                width: 100%;
-                border: 1px solid #fff;
-                -webkit-appearance: none;
-                margin-bottom: 28px;
-                font-family: "Open Sans", sans-serif;
-            }
             .form-check-label {
                 span {
                     margin-left: 20px;
@@ -144,61 +134,80 @@ nav {
                 width: 20px;
                 height: 20px;
             }
+            h3 {
+                text-align: center;
+                margin: 0em 0 1em 0;
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+            .form-group {
+                position: relative;
+                margin: 0 0 28px 0;
+                label {
+                    position: absolute;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    left: 10px;
+                    color: $cl_theme_01-l;
+                }
+                input[type="text"],
+                input[type="password"] {
+                    outline: none;
+                    font-size: 0.9em;
+                    color: #999;
+                    padding: 12px 12px 12px 40px;
+                    margin: 0;
+                    width: 100%;
+                    border: 1px solid #fff;
+                    -webkit-appearance: none;
+                    font-family: "Open Sans", sans-serif;
+                    border-radius: $r_soft;
+                }
+            }
         }
         .login-bottom {
             margin: 2em 0 3em 0;
-        }
-        .login-bottom a {
-            float: left;
-            color: #fff;
-            font-size: 0.95em;
-            line-height: 43px;
-        }
-        .login-bottom a:hover {
-            color: #fff;
-            transition: 0.5s all;
-            -webkit-transition: 0.5s all;
-            -moz-transition: 0.5s all;
-            -o-transition: 0.5s all;
-            -ms-transition: 0.5s all;
-            text-decoration: underline;
-        }
-        .login-top.left input[type="submit"]:hover {
-            background: #227279;
-        }
-        .login-bottom input[type="submit"] {
-            font-size: 0.9em;
-            color: #fff;
-            background: $cl_theme_01-d;
-            outline: none;
-            border: none;
-            cursor: pointer;
-            padding: 12px 10px;
-            -webkit-appearance: none;
-            width: 35%;
-            font-weight: 400;
-            transition: 0.5s all;
-            -webkit-transition: 0.5s all;
-            -moz-transition: 0.5s all;
-            -o-transition: 0.5s all;
-            -ms-transition: 0.5s all;
-            text-transform: uppercase;
-            float: right;
-            border-radius: $r_soft;
-        }
-        .login-bottom input[type="submit"]:hover {
-            background: #227279;
+            a {
+                float: left;
+                color: #fff;
+                font-size: 0.95em;
+                line-height: 43px;
+                &:hover {
+                    color: #fff;
+                    transition: 0.5s all;
+                    -webkit-transition: 0.5s all;
+                    -moz-transition: 0.5s all;
+                    -o-transition: 0.5s all;
+                    -ms-transition: 0.5s all;
+                    text-decoration: underline;
+                }
+            }
+            input[type="submit"] {
+                font-size: 0.9em;
+                color: #fff;
+                background: $cl_theme_01-d;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px 10px;
+                -webkit-appearance: none;
+                width: 35%;
+                font-weight: 400;
+                transition: 0.5s all;
+                -webkit-transition: 0.5s all;
+                -moz-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                -ms-transition: 0.5s all;
+                text-transform: uppercase;
+                float: right;
+                border-radius: $r_soft;
+            }
+            input[type="submit"]:hover {
+                background: #227279;
+            }
         }
 
-        
-
-        .login-top.right h3 {
-            text-align: center;
-            margin: 0em 0 1em 0;
-            color: #fff;
-            font-size: 1.5em;
-            font-weight: 300;
-        }
         .eye {
             position: absolute;
             right: 0;

@@ -27,8 +27,9 @@
         </li>
         <li class="nav-item">
             <!-- Button trigger modal -->
-            <button type="button" data-toggle="modal"class=" nav-link" data-target="#modelId">
-                Đăng nhập và đăng kí
+            <button type="button" data-toggle="modal" class=" nav-link" data-target="#modelId">
+                <i class="fa fa-user-circle    "></i>
+                Tài khoản
             </button>
             <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
                 aria-hidden="true">
@@ -73,9 +74,16 @@
                             <div class="login-top right">
                                 <h3>Đăng nhập</h3>
                                 <form action="#" method="post">
-                                    <input type="text" class="email1 " name="password" placeholder="Email" required="">
-                                    <input type="password" class="password1" name="password" placeholder="Password"
-                                        required="">
+                                    <div class="form-group">
+                                        <label for=""><i class="fas fa-user-circle    "></i></label>
+                                        <input type="text" class="email1 " name="password" placeholder="Email"
+                                            required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""><i class="fas fa-key    "></i></label>
+                                        <input type="password" class="password1" name="password" placeholder="Password"
+                                            required="">
+                                    </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input type="checkbox" class="form-check-input" name="" id=""
