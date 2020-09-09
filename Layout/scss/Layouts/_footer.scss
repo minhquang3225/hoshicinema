@@ -1,0 +1,17 @@
+footer{
+    background-color: #144b67;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../image/footer_bg.jpg) no-repeat bottom / cover;
+    color: #fff;
+    padding: $pd-7 0;
+    .row{
+        justify-content: space-between;
+        .imgBx{
+            margin: 0 auto;
+            margin-bottom: $mg-4;
+        }
+    }
+    .copy-right{
+        text-align: center;
+        font-size: 1.2rem;;
+    }
+}

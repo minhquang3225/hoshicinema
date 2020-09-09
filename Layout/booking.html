@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn rạp và đặt vé</title>
+    <link rel="stylesheet" href="./library/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/booking.css">
+
+
+
+</head>
+
+
+<body>
+    <div class="container-fluid main-container">
+        <nav class="navbar navbar-expand-sm" insert="./html_e/nav.html"></nav>
+        <div class="seat-booking">
+            <div class="seat-booking__left col-4 col-xm- col-sm- col-md- col-lg- col-xl-">
+            </div>
+            <div class="seat-booking__right col-8 col-xm- col-sm- col-md- col-lg- col-xl-">
+                <ul class="showcase">
+                    <li>
+                        <div class="seat"></div>
+                        <small>Ghế trống</small>
+                    </li>
+                    <li>
+                        <div class="seat selected"></div>
+                        <small>Ghế bạn chọn</small>
+                    </li>
+                    <li>
+                        <div class="seat occupied"></div>
+                        <small>Ghế đã đặt</small>
+                    </li>
+                </ul>
+
+                <div class="container">
+                    <div class="screen">
+                        <svg height="100" width="550" style="
+                            filter: drop-shadow(0 12px 10px #ffffff);
+                            fill: #ffffff;
+                            color: #c9c9c9;
+                        ">
+                            <g class="svgWrapper>
+                                <defs>
+                                    <filter id=" glow">
+                                <fegaussianblur class="blur" result="" stddeviation="4"></fegaussianblur>
+                                <femerge>
+                                    <femergenode in="coloredBlur"></femergenode>
+                                    <femergenode in="coloredBlur"></femergenode>
+                                    <femergenode in="coloredBlur"></femergenode>
+                                    <femergenode in="SourceGraphic"></femergenode>
+                                </femerge>
+                                </filter>
+                                </defs>
+                                <path class="exampleGlow" d="M 0 60 q 225 -50 550 0" fill="#E3E9ED" 
+                                    style="fill-opacity: 0; stroke-width: 6; stroke: #00ffe1" />
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat selected"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+                    <p class="text">
+                        You have selected <span id="count">0</span> seats for the total price of Rs. <span
+                            id="total">0</span>
+                    </p>
+                </div>
+            </div>
+
+           
+
+        </div>
+    </div>
+    <div class="movie__bg"></div>
+
+    <script src="./js/script.js"></script>
+    <script src="./library/bootstrap/jquery.min.js"></script>
+    <script src="./library/bootstrap/popper.min.js"></script>
+    <script src="./library/bootstrap/bootstrap.min.js"></script>
+    <script src="./js/booking.js"></script>
+    <script>
+
+    </script>
+</body>
+
+
+</html>

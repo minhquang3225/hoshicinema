@@ -71,6 +71,25 @@ ul {
     max-width: 100%;
     height: 100%; }
 
+.scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.8em;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease-in; }
+  .scrollTop.active {
+    visibility: visible;
+    opacity: 1; }
+
 a {
   text-decoration: none;
   width: 100%;
@@ -459,28 +478,72 @@ nav {
     transform: translate(-100%, -50%);
     left: -10px; }
 
+footer {
+  background-color: #144b67;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../image/footer_bg.jpg) no-repeat bottom/cover;
+  color: #fff;
+  padding: 40px 0; }
+  footer .row {
+    justify-content: space-between; }
+    footer .row .imgBx {
+      margin: 0 auto;
+      margin-bottom: 15px; }
+  footer .copy-right {
+    text-align: center;
+    font-size: 1.2rem; }
+
 .slide-content {
   text-align: center;
   width: 100%;
   height: 100%; }
+  .slide-content:hover .imgBx .imgBx__overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: all ease-in 0.1s;
+    transition-delay: 0.3s; }
+  .slide-content:hover .imgBx i {
+    opacity: 1;
+    transition: all ease-in 0.1s;
+    transition-delay: 0.3s; }
   .slide-content:hover .slide-content__detail {
     transition: opacity 0.3s;
-    transition-delay: 0.4s;
-    opacity: 1; }
+    transition-delay: 0.3s;
+    opacity: 1;
+    width: 350px; }
     .slide-content:hover .slide-content__detail.left .wrapper {
       animation: fadeRight 0.3s;
       right: -10px;
-      animation-delay: .4s; }
+      animation-delay: 0.3s; }
     .slide-content:hover .slide-content__detail.right .wrapper {
       animation: fadeLeft 0.3s;
       left: -10px;
-      animation-delay: .4s; }
+      animation-delay: 0.3s; }
   .slide-content .imgBx {
+    position: relative;
     height: 300px;
     width: 100%;
     margin-bottom: 15px; }
+    .slide-content .imgBx i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all ease-in 0.3s;
+      font-size: 2rem; }
+  .slide-content .imgBx__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #FE810F;
+    opacity: 0;
+    transition: all ease-in 0.1s; }
   .slide-content .slide-content__detail {
-    width: 350px;
+    width: 0px;
     height: 300px;
     position: absolute;
     top: 0;

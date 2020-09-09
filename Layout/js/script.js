@@ -9,10 +9,10 @@ function includeHTML() {
         if (file) {
             /*make an HTTP request using the attribute value as the file name:*/
             xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
-                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
                     /*remove the attribute, and call this function once more:*/
                     elmnt.removeAttribute("insert");
                     includeHTML();
@@ -29,57 +29,26 @@ includeHTML();
 
 
 
-getEle = (ele) =>{
+getEle = (ele) => {
     return document.querySelector(ele);
 }
 
-getEles = (ele) =>{
-    document.querySelectorAll(ele);
+getEles = (ele) => {
+    return document.querySelectorAll(ele);
 }
-clearActive = (objectName, activeName)=>{
-    objectName.forEach(item=>{
-        item.classList.remove(activeName)
+
+
+//Back to top
+
+if (getEle('.scrollTop') != null) {
+    window.addEventListener('scroll', () => {
+        getEle('.scrollTop').classList.toggle('active', window.scrollY > 500)   //Có điều kiện trong toggle
     })
 }
-bodyScroll = (bool) =>{
-    document.body.style.overflow = bool ? '' : 'hidden';
-}
-overlayActive = (parentClassName) =>{   
-        let isActive = true;
-        let init = true;
-        let overlay = getEle(parentClassName+ ' .overlay__bg');
-        getEle(parentClassName).addEventListener('click', ()=>{
-            //Hơi hại não nhé
-            if (init == true && isActive == true) { isActive = true; }
-            else if(init == true && isActive == false){ isActive = true; }
-            else if(init == false && isActive==false){ isActive == false; }
-            
-            overlay.classList.toggle('overlay-active', isActive);
-            init = init===true ? false : true;
-        })
-        overlay.addEventListener('click', (e)=>{
-            isActive=false;
-        })
-        getEle(parentClassName+ ' .overlay__close').addEventListener('click', ()=>{
-            isActive = false;
 
-        })
-        
-}
-
-function showPassword(classParent){
-    let x = document.querySelector(`.${classParent} .password`);
-    let y = document.querySelector(`.${classParent} .hide1`);
-    let z = document.querySelector(`.${classParent} .hide2`);
-    
-    if (x.type === 'password') {
-        x.type = "text";
-        y.style.display = "block";
-        z.style.display = "none";
-    }
-    else{
-        x.type = "password";
-        y.style.display = "none";
-        z.style.display = "block";
-    }
+scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    })
 }

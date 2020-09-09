@@ -8,7 +8,7 @@
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sortland_bridge.jpg/1200px-Sortland_bridge.jpg"
         type="image/x-icon">
     <title>Hoshi Cinema</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./library/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/homepage.css">
@@ -20,6 +20,11 @@
         <div class="carousel row" insert="./html_e/carousel.html"></div>
         <div class="feature" insert="./html_e/feature.html"></div>
         <div class="showtime" insert="./html_e/showtime.html"></div>
+        <footer insert="./html_e/footer.html"></footer>
+        <div class="scrollTop" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up    "></i>
+        </div>
+
     </div>
     <script src="./library/bootstrap/jquery.min.js"></script>
     <script src="./library/bootstrap/popper.min.js"></script>
@@ -51,7 +56,7 @@
             });
             QuangCarousel(false, 5, '.5s', 1500, .4, 5);
 
-        }, 400)
+        }, 600)
     </script>
 </body>
 
