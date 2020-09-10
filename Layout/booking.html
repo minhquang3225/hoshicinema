@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chọn rạp và đặt vé</title>
     <link rel="stylesheet" href="./library/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-pro-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="./css/booking.css">
-
-
-
 </head>
 
 
@@ -18,23 +16,21 @@
         <nav class="navbar navbar-expand-sm" insert="./html_e/nav.html"></nav>
         <div class="seat-booking">
             <div class="seat-booking__left col-4 col-xm- col-sm- col-md- col-lg- col-xl-">
+                <div class="film-booking">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg"
+                        alt="">
+                    <div class="details">
+                        <div class="name">Cướp biển vùng Caribe</div>
+                        <div class="rating"><i class="far fa-star"></i> 8.8<span>/10</span></div>
+                        <div class="date"><i class="far fa-calendar-alt    "></i> Thứ 4,  16/7/2020 </div>
+                        <div class="time"><i class="far fa-clock    "></i>14:10</div>
+                        <div class="address"> <i class="far fa-map-marked-alt    "></i> <span>Galaxy Cinema, 142A, Xô Viết Nghệ Tĩnh, P.17, Q.12, TP.HCM</span></div>
+                        <div class="ticket"><i class="far fa-ticket-alt    "></i><span>5 vé</span></div>
+                        <div class="price"><i class="far fa-dollar-sign    "></i><span>200.000VND</span></div>
+                    </div>
+                </div>
             </div>
             <div class="seat-booking__right col-8 col-xm- col-sm- col-md- col-lg- col-xl-">
-                <ul class="showcase">
-                    <li>
-                        <div class="seat"></div>
-                        <small>Ghế trống</small>
-                    </li>
-                    <li>
-                        <div class="seat selected"></div>
-                        <small>Ghế bạn chọn</small>
-                    </li>
-                    <li>
-                        <div class="seat occupied"></div>
-                        <small>Ghế đã đặt</small>
-                    </li>
-                </ul>
-
                 <div class="container">
                     <div class="screen">
                         <svg height="100" width="550" style="
@@ -54,7 +50,7 @@
                                 </femerge>
                                 </filter>
                                 </defs>
-                                <path class="exampleGlow" d="M 0 60 q 225 -50 550 0" fill="#E3E9ED" 
+                                <path class="exampleGlow" d="M 0 60 q 225 -50 550 0" fill="#E3E9ED"
                                     style="fill-opacity: 0; stroke-width: 6; stroke: #00ffe1" />
                                 </path>
                             </g>
@@ -173,15 +169,25 @@
                         <div class="seat"></div>
                         <div class="seat"></div>
                     </div>
-
-                    <p class="text">
-                        You have selected <span id="count">0</span> seats for the total price of Rs. <span
-                            id="total">0</span>
-                    </p>
+                    <ul class="showcase">
+                        <li>
+                            <div class="seat"></div>
+                            <small>Ghế trống</small>
+                        </li>
+                        <li>
+                            <div class="seat selected"></div>
+                            <small>Ghế bạn chọn</small>
+                        </li>
+                        <li>
+                            <div class="seat occupied"></div>
+                            <small>Ghế đã đặt</small>
+                        </li>
+                    </ul>
+    
                 </div>
             </div>
 
-           
+
 
         </div>
     </div>
