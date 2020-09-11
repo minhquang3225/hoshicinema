@@ -1,0 +1,197 @@
+.navbar {
+    color: #fff;
+    background-color: #223a4776;
+    top: 0;
+    width: 100%;
+}
+.movie__bg {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(
+            to bottom,
+            rgba(18, 24, 27, 0) 15%,
+            rgba(18, 24, 27, 0.6) 20%,
+            rgba(18, 24, 27, 0.8) 25%,
+            rgba(18, 24, 27, 0.9) 30%,
+            rgba(18, 24, 27, 0.95) 35%,
+            rgba(18, 24, 27, 0.99) 40%
+        ),
+        url(../image/pc_bg.jpg) no-repeat top;
+}
+.booking {
+    display: flex;
+}
+[id^="dtl-booking"] {
+    width: 100%;
+    height: 800px;
+    // background-color: #12181b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+}
+.booking__left {
+    color: $cl_txt_01-d;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 650px;
+    top: 80px;
+    overflow: hidden;
+    position: sticky;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &.active,
+    &:hover {
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 100%;
+        flex: none;
+        transition: all 0.2s ease-in;
+        .booking__left-details {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 500px;
+            transform: scale(1.6);
+            transition: all 0.2s ease-in;
+            img {
+                width: 40%;
+                height: 100%;
+                margin-bottom: 0;
+            }
+            .details {
+                width: 50%;
+            }
+        }
+    }
+}
+.booking__left-details {
+    width: 250px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        * {
+            display: flex;
+            margin-bottom: $mg-1;
+            span {
+                display: inline-block;
+                width: 80%;
+            }
+        }
+        .name {
+            font-size: 1.5rem;
+            margin-bottom: $mg-2;
+        }
+        i {
+            margin-right: $mg-3;
+            color: $cl_txt_02-d;
+            width: 30px;
+        }
+        .process {
+            padding: $pd-3 $pd-8;
+            background: #22cb00;
+            border-radius: $r_hard;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #fff;
+            margin-top: $mg-3;
+            outline: none;
+        }
+    }
+    img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        margin-bottom: $mg-5;
+    }
+}
+.booking__right {
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    &.unactive {
+        display: none;
+        width: 0%;
+        flex: none;
+        max-width: 0%;
+        display: none;
+        transition: all 0.2s ease-in;
+    }
+    .showcase {
+        margin-top: $mg-8;
+        color: $cl_txt_01-d;
+    }
+}
+
+.booking__right-seating {
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .seat {
+        background-color: #444451;
+        height: 18px;
+        width: 22px;
+        margin: 5px 5px;
+    }
+
+    .selected {
+        background-color: #22cb00;
+    }
+
+    .occupied {
+        background-color: rgb(43, 89, 255);
+    }
+
+    .seat:nth-of-type(2) {
+        margin-right: 25px;
+    }
+
+    .seat:nth-last-of-type(2) {
+        margin-left: 25px;
+    }
+
+    .seat:not(.occupied):hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+    .showcase .seat:not(.occupied):hover {
+        cursor: default;
+        transform: scale(1);
+    }
+    .showcase {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        list-style-type: none;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #777;
+    }
+
+    .showcase li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+    }
+    .showcase li small {
+        margin-left: 2px;
+    }
+}

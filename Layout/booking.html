@@ -16,72 +16,85 @@
         <nav class="navbar navbar-expand-sm" insert="./html_e/nav.html"></nav>
         <div class="booking">
             <div class="booking__left col-4 col-xm- col-sm- col-md- col-lg- col-xl-">
-                <div class="booking__left-detail">
+                <div class="booking__left-details">
                     <img src="https://m.media-amazon.com/images/M/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg"
                         alt="">
                     <div class="details">
                         <div class="name">Cướp biển vùng Caribe</div>
                         <div class="rating"><i class="far fa-star"></i> 8.8<span>/10</span></div>
-                        <div class="date"><i class="far fa-calendar-alt    "></i> Thứ 4,  16/7/2020 </div>
+                        <div class="date"><i class="far fa-calendar-alt    "></i> Thứ 4, 16/7/2020 </div>
                         <div class="time"><i class="far fa-clock    "></i>14:10</div>
-                        <div class="address"> <i class="far fa-map-marked-alt    "></i> <span>Galaxy Cinema, 142A, Xô Viết Nghệ Tĩnh, P.17, Q.12, TP.HCM</span></div>
+                        <div class="address"> <i class="far fa-map-marked-alt    "></i> <span>Galaxy Cinema, 142A, Xô
+                                Viết Nghệ Tĩnh, P.17, Q.12, TP.HCM</span></div>
                         <div class="ticket"><i class="far fa-ticket-alt    "></i><span>5 vé</span></div>
                         <div class="price"><i class="far fa-dollar-sign    "></i><span>200.000VND</span></div>
+                        <button class="process unactive"   role="button" aria-disabled="true"> TIến hành đặt vé </button>
+
                     </div>
                 </div>
             </div>
+            <div class="booking__right--navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item navbar__link--active">
+                        <a href="#dtl-booking-1" class="navbar__link">Chọn phim</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#dtl-booking-2" class="navbar__link">Mua vé và chọn chỗ</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#dtl-booking-3" class="navbar__link">Mua vé và chọn chỗ</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#dtl-booking-4" class="navbar__link">Tiến hành đặt vé</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#dtl-booking-5" class="navbar__link">Blog</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#dtl-booking-6" class="navbar__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
             <div class="booking__right col-8 col-xm- col-sm- col-md- col-lg- col-xl-">
-                <div class="booking__right--navbar">
-                    <ul class="navbar__list">
-                        <li class="navbar__item navbar__link--active">
-                            <a href="#dtl-booking-1" class="navbar__link">Địa điểm</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#dtl-booking-2" class="navbar__link">Ngày và giờ</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#dtl-booking-3" class="navbar__link">Mua vé và chọn chỗ</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#dtl-booking-4" class="navbar__link">Portfolio</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#dtl-booking-5" class="navbar__link">Blog</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="#dtl-booking-6" class="navbar__link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
                 <div class="booking__right-time">
-                    
+
                 </div>
-                <div class="booking__right-seating container main__content" id="dtl-booking-1">
+                <div id="dtl-booking-1" class="main__content">
+                    Section 2
+                </div>
+                <div class="booking__right-seating container main__content" id="dtl-booking-2">
                     <div class="screen">
-                        <svg height="100" width="550" style="
-                            filter: drop-shadow(0 12px 10px #ffffff);
-                            fill: #ffffff;
-                            color: #c9c9c9;
-                        ">
-                            <g class="svgWrapper>
-                                <defs>
-                                    <filter id=" glow">
-                                <fegaussianblur class="blur" result="" stddeviation="4"></fegaussianblur>
-                                <femerge>
-                                    <femergenode in="coloredBlur"></femergenode>
-                                    <femergenode in="coloredBlur"></femergenode>
-                                    <femergenode in="coloredBlur"></femergenode>
-                                    <femergenode in="SourceGraphic"></femergenode>
-                                </femerge>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="550" height="100" style="overflow: visible;"
+                            preserveAspectRatio="xMinYMin meet">
+                            <defs>
+                                <filter id="sofGlow" height="500%" width="300%" x="-75%" y="-150%">
+                                    <!-- Thicken out the original shape -->
+                                    <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+
+                                    <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+                                    <feGaussianBlur in="thicken" stdDeviation="10" result="blurred" />
+
+                                    <!-- Change the colour -->
+                                    <feFlood flood-color="rgb(0,186,255)" result="glowColor" />
+
+                                    <!-- Color in the glows -->
+                                    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+                                    <!--	Layer the effects together -->
+                                    <feMerge>
+                                        <feMergeNode in="softGlow_colored" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+
                                 </filter>
-                                </defs>
-                                <path class="exampleGlow" d="M 0 60 q 225 -50 550 0" fill="#E3E9ED"
-                                    style="fill-opacity: 0; stroke-width: 6; stroke: #00ffe1" />
-                                </path>
-                            </g>
+
+                            </defs>
+
+                            <path d="M 0 50 q 225 -50 550 0" fill="none" filter="url(#sofGlow)" stroke-width="8"
+                                stroke="white" filter="url(#sofGlow)" />
+
                         </svg>
                     </div>
-
                     <div class="row">
                         <div class="seat"></div>
                         <div class="seat"></div>
@@ -208,21 +221,17 @@
                             <small>Ghế đã đặt</small>
                         </li>
                     </ul>
-    
                 </div>
-                <div id="dtl-booking-2" class="main__content">
 
-                </div>
-                <div id="dtl-booking-3" class="main__content"></div>
-                <div id="dtl-booking-4" class="main__content"></div>
-                <div id="dtl-booking-5" class="main__content"></div>
-                <div id="dtl-booking-6" class="main__content"></div>
+                <div id="dtl-booking-3" class="main__content"> Section 3</div>
+                <div id="dtl-booking-4" class="main__content"> Section 4</div>
+                <div id="dtl-booking-5" class="main__content"> Section 5</div>
             </div>
 
 
 
         </div>
-      
+
     </div>
     <div class="movie__bg"></div>
 

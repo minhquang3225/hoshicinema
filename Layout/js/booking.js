@@ -43,8 +43,21 @@ setTimeout(() => {
                 }
             }
         }
-
     }
+
+    let bookingStep = ()=>{
+        let bookingStep = document.querySelectorAll('.navbar__item');
+        let booking__left = document.querySelector('.booking__left');
+        let booking__right = document.querySelector('.booking__right');
+        console.log(bookingStep[bookingStep.length-1]);
+        
+        bookingStep[bookingStep.length-1].addEventListener('click', ()=>{
+            booking__left.classList.toggle('active');
+            booking__right.classList.toggle('unactive');
+        })
+    }
+    //run function
     makeNavLInksSmooth();
     spyScrolling();
+    bookingStep();
 }, 300)
