@@ -67,8 +67,11 @@ ul {
   height: 70px;
   overflow: hidden; }
   .imgBx img {
-    max-width: 100%;
-    height: 100%; }
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 1; }
 
 .scrollTop {
   position: fixed;
@@ -376,6 +379,9 @@ nav {
       color: #fff;
       margin-top: 10px;
       outline: none; }
+      .booking__left-details .details .process.unactive {
+        background: #343434;
+        opacity: .4; }
   .booking__left-details img {
     width: 100%;
     height: 280px;
@@ -407,8 +413,8 @@ nav {
   align-items: center; }
   .booking__right-seating .seat {
     background-color: #444451;
-    height: 18px;
-    width: 22px;
+    height: 22px;
+    width: 26px;
     margin: 5px 5px; }
   .booking__right-seating .selected {
     background-color: #22cb00; }

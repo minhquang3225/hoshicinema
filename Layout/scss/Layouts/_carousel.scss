@@ -65,10 +65,15 @@
         height: 100%;
         text-align: center;
         transition: transform 0.6s;
-        &.active:hover{
-            .overlay{
-                opacity: 1;
-                transition: opacity .5 ease-in;
+        &.active {
+            position: relative;
+            transform: scale(1.6);
+            z-index: 10;
+            :hover{
+                .overlay{
+                    opacity: 1;
+                    transition: opacity .5 ease-in;
+                }
             }
         }
         .overlay{
@@ -95,11 +100,7 @@
     }
 
     /* .carousel-image:hover, */
-    .carousel-image.active {
-        position: relative;
-        transform: scale(1.6);
-        z-index: 10;
-    }
+ 
 
     .carousel-image.sub {
         position: relative;

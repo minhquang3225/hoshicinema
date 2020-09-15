@@ -43,9 +43,12 @@ ul{
     width: 100px;
     height: 70px;
     overflow: hidden;
-    img{
-        max-width: 100%;
-        height: 100%;
+    img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: top;
+        opacity: 1;
     }
 }
 .scrollTop{
